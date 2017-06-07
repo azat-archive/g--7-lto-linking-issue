@@ -1,3 +1,11 @@
+Building in docker
+=================
+
+```shell
+docker-compose run build
+```
+
+
 Building
 ========
 

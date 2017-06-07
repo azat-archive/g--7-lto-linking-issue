@@ -1,0 +1,11 @@
+build:
+    build: .
+    volumes:
+        - .:/src
+        - /tmp/gcc-build:/build
+    working_dir: /build
+    command: |
+        bash -c 'bash -s <<EOF
+          cmake -DCMAKE_BUILD_TYPE=releaselto -G Ninja /src &&
+          ninja
+        EOF'
